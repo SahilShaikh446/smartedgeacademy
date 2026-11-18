@@ -1,0 +1,29 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="48" fill="#0A192F" />
+  <g transform="translate(48, 48) scale(1.6)">
+    <!-- Top ribbon (Electric Cyan to Azure) -->
+    <path d="M50 10 L25 35 L45 55 L70 30 L50 10 Z" fill="url(#cyanGrad)" />
+    <path d="M25 35 L5 55 L25 75 L45 55 Z" fill="url(#blueGrad)" opacity="0.9" />
+    <!-- Bottom ribbon (Deep Blue & Cobalt) -->
+    <path d="M50 90 L75 65 L55 45 L30 70 L50 90 Z" fill="url(#navyGrad)" />
+    <path d="M75 65 L95 45 L75 25 L55 45 Z" fill="url(#cobaltGrad)" opacity="0.9" />
+  </g>
+  <defs>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#034694" />
+    </linearGradient>
+    <linearGradient id="cobaltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+  </defs>
+</svg>
