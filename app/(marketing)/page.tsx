@@ -18,6 +18,7 @@ export const metadata: Metadata = constructMetadata({
   title: "SmartEdge Academy | AI-Powered Career & Job Skills Academy in Bhiwandi",
   description:
     "DON'T JUST GET A DEGREE. GET JOB-READY WITH AI. Practical IT and AI courses in Java, Python, Data Science, Power BI, React, MERN, Cloud & DevOps, ChatGPT, and n8n with 100% Job Assistance in Bhiwandi.",
+  canonicalUrl: "/",
 })
 
 export default function Home() {

@@ -20,6 +20,7 @@ export const metadata: Metadata = constructMetadata({
   title: "Free Career Counselling | SmartEdge Academy Bhiwandi",
   description:
     "Not sure which IT or AI course fits your background? Book a 100% free career counselling session with senior software engineers and placement advisors at SmartEdge Academy Bhiwandi.",
+  canonicalUrl: "/career-counselling",
 })
 
 export default function CareerCounsellingPage() {

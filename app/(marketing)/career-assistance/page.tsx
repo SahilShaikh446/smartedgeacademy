@@ -25,6 +25,7 @@ export const metadata: Metadata = constructMetadata({
   title: "100% Job Assistance & Career Support | SmartEdge Academy Bhiwandi",
   description:
     "Learn how SmartEdge Academy's 100% Job Assistance program prepares students with ATS resumes, mock technical interviews, GitHub project portfolios, and direct hiring referrals.",
+  canonicalUrl: "/career-assistance",
 })
 
 export default function CareerAssistancePage() {

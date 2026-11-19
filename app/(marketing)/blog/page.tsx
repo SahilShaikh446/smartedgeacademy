@@ -19,6 +19,7 @@ export const metadata: Metadata = constructMetadata({
   title: "Career Resources & Tech Guides | SmartEdge Academy Bhiwandi",
   description:
     "Expert tech career guides, interview preparation strategies, and learning roadmaps for IT and non-IT graduates in Bhiwandi, Thane, and Mumbai.",
+  canonicalUrl: "/blog",
 })
 
 export default function BlogPage() {

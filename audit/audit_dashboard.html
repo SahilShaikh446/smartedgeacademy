@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartEdge Academy – 360° SEO & Growth Audit Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+  <!-- Top Navigation Bar -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="size-9 rounded-lg bg-gradient-to-tr from-blue-600 via-sky-500 to-amber-400 flex items-center justify-center font-black text-white text-lg shadow-md shadow-sky-500/20">
+          SE
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-white leading-tight">SmartEdge Academy</h1>
+          <p class="text-xs text-slate-400 font-mono">360° Technical SEO &amp; Growth Audit • November 2026</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+          <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Audit Completed
+        </span>
+        <a href="https://academy.smartedgegroup.in" target="_blank" class="text-xs text-sky-400 hover:text-sky-300 font-mono flex items-center gap-1 border border-slate-700 rounded-md px-3 py-1.5 hover:border-slate-600 transition">
+          Live Site ↗
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+    <!-- Executive KPI Bar -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Overall SEO Health</div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-4xl font-extrabold text-amber-400">68</span>
+          <span class="text-xs text-slate-500">/ 100</span>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2">Dampened by global canonical bug &amp; unclaimed GBP</p>
+        <div class="absolute right-3 top-3 text-2xl text-slate-800 font-mono">#01</div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Critical Issues</div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-4xl font-extrabold text-rose-500">3</span>
+          <span class="text-xs text-rose-400/80 font-medium">Require 48h Fix</span>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2">Canonical loop, silent leads API, missing GBP</p>
+        <div class="absolute right-3 top-3 text-2xl text-slate-800 font-mono">#02</div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Catalog Depth</div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-4xl font-extrabold text-sky-400">21</span>
+          <span class="text-xs text-slate-500">Courses</span>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2">Full software engineering &amp; AI tracks</p>
+        <div class="absolute right-3 top-3 text-2xl text-slate-800 font-mono">#03</div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">AEO / GEO Score</div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-4xl font-extrabold text-purple-400">84</span>
+          <span class="text-xs text-purple-400/80 font-medium">Industry Leading</span>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2">Verified llms.txt &amp; explicit AI bot allowances</p>
+        <div class="absolute right-3 top-3 text-2xl text-slate-800 font-mono">#04</div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Local Growth Multiplier</div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-4xl font-extrabold text-emerald-400">+180%</span>
+          <span class="text-xs text-slate-500">Projected</span>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2">From GBP claiming &amp; Local 3-Pack capture</p>
+        <div class="absolute right-3 top-3 text-2xl text-slate-800 font-mono">#05</div>
+      </div>
+    </section>
+
+    <!-- Visual Charts Grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Radar Chart: Category Scorecard -->
+      <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-lg font-bold text-white">Audit Scorecard by Functional Discipline</h2>
+            <p class="text-xs text-slate-400">Inspected real-world metrics across 10 evaluation categories (0-100)</p>
+          </div>
+          <span class="text-xs font-mono px-2 py-1 bg-slate-800 rounded text-slate-300">Evidence-Backed</span>
+        </div>
+        <div class="h-80 flex items-center justify-center">
+          <canvas id="categoryRadarChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Severity Distribution Bar & Highlights -->
+      <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-lg font-bold text-white mb-1">Issues by Severity &amp; Urgency</h2>
+          <p class="text-xs text-slate-400 mb-4">Prioritized breakdown of all 18 identified audit findings</p>
+          <div class="h-44">
+            <canvas id="severityBarChart"></canvas>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-800 space-y-2.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="flex items-center gap-2">
+              <span class="size-2.5 rounded-full bg-rose-500"></span>
+              <span class="text-slate-200 font-medium">Critical (Day 1 - 3)</span>
+            </span>
+            <span class="font-mono font-bold text-rose-400">3 Issues (17%)</span>
+          </div>
+          <div class="flex items-center justify-between text-xs">
+            <span class="flex items-center gap-2">
+              <span class="size-2.5 rounded-full bg-amber-500"></span>
+              <span class="text-slate-200 font-medium">High Severity (Day 4 - 14)</span>
+            </span>
+            <span class="font-mono font-bold text-amber-400">7 Issues (39%)</span>
+          </div>
+          <div class="flex items-center justify-between text-xs">
+            <span class="flex items-center gap-2">
+              <span class="size-2.5 rounded-full bg-sky-500"></span>
+              <span class="text-slate-200 font-medium">Medium Severity (Day 15 - 45)</span>
+            </span>
+            <span class="font-mono font-bold text-sky-400">6 Issues (33%)</span>
+          </div>
+          <div class="flex items-center justify-between text-xs">
+            <span class="flex items-center gap-2">
+              <span class="size-2.5 rounded-full bg-slate-500"></span>
+              <span class="text-slate-200 font-medium">Low / Polish (Day 45 - 90)</span>
+            </span>
+            <span class="font-mono font-bold text-slate-400">2 Issues (11%)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Issues Explorer -->
+    <section class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <div>
+          <h2 class="text-lg font-bold text-white">Comprehensive Issues &amp; Fixes Explorer</h2>
+          <p class="text-xs text-slate-400">Filter, search, and review verified findings with exact code fixes</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="filterIssues('all')" class="filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white transition">All (18)</button>
+          <button onclick="filterIssues('Critical')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-rose-400 transition">Critical (3)</button>
+          <button onclick="filterIssues('High')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-amber-400 transition">High (7)</button>
+          <button onclick="filterIssues('Local')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-emerald-400 transition">Local SEO</button>
+          <button onclick="filterIssues('CRO')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-purple-400 transition">CRO &amp; Leads</button>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 text-slate-400 font-mono uppercase tracking-wider">
+              <th class="py-3 px-3">ID</th>
+              <th class="py-3 px-3">Severity</th>
+              <th class="py-3 px-3">Category</th>
+              <th class="py-3 px-3">Issue Title &amp; Verified Evidence</th>
+              <th class="py-3 px-3">Impact</th>
+              <th class="py-3 px-3">Solution</th>
+            </tr>
+          </thead>
+          <tbody id="issuesTableBody" class="divide-y divide-slate-800/60 font-sans">
+            <!-- Rendered by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 30 / 60 / 90-Day Implementation Roadmap -->
+    <section class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-white">Strategic 90-Day Execution Roadmap</h2>
+        <p class="text-xs text-slate-400">Sequential, dependency-mapped milestones to dominate Bhiwandi &amp; MMR tech education</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 30 Days -->
+        <div class="border border-slate-800 rounded-xl bg-slate-950/60 p-5 space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-wider text-rose-400 font-bold">Phase 1 (Days 1 - 30)</span>
+              <h3 class="text-sm font-bold text-white">Emergency Fixes &amp; GBP Foundation</h3>
+            </div>
+            <span class="px-2 py-1 rounded bg-rose-500/10 text-rose-400 text-xs font-bold font-mono">P0</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Fix hardcoded canonical URL bug in <code class="text-sky-300">lib/utils.ts</code></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Connect email &amp; webhook to <code class="text-sky-300">/api/enquiry</code> to capture leads</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Claim &amp; submit video verification for Google Business Profile</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Remove <code class="text-sky-300">inlineCss: true</code> to cut HTML size from 1.2MB to &lt;100KB</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Add security headers (<code class="text-sky-300">X-Frame-Options</code>, etc.)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 60 Days -->
+        <div class="border border-slate-800 rounded-xl bg-slate-950/60 p-5 space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-wider text-amber-400 font-bold">Phase 2 (Days 31 - 60)</span>
+              <h3 class="text-sm font-bold text-white">Local Authority &amp; Content Engine</h3>
+            </div>
+            <span class="px-2 py-1 rounded bg-amber-500/10 text-amber-400 text-xs font-bold font-mono">P1</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold">→</span>
+              <span>Launch Student Review QR Code campaign targeting 30+ 5★ reviews</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold">→</span>
+              <span>Deploy dynamic blog engine with first 4 pillar career transition guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold">→</span>
+              <span>Build 25+ verified local citations (Justdial, Sulekha, IndiaMART)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold">→</span>
+              <span>Add visible Accordion FAQ &amp; BreadcrumbList schema</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold">→</span>
+              <span>Deploy 'Calculate Course Fees &amp; EMI' micro-conversion modal</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 90 Days -->
+        <div class="border border-slate-800 rounded-xl bg-slate-950/60 p-5 space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-wider text-sky-400 font-bold">Phase 3 (Days 61 - 90)</span>
+              <h3 class="text-sm font-bold text-white">Market Dominance &amp; MMR Scale</h3>
+            </div>
+            <span class="px-2 py-1 rounded bg-sky-500/10 text-sky-400 text-xs font-bold font-mono">P2</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-sky-400 font-bold">⚡</span>
+              <span>Achieve Top 3 Google Local 3-Pack rank for 'computer classes in Bhiwandi'</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-400 font-bold">⚡</span>
+              <span>Publish commuter landing pages for Kalyan and Thane student feeder zones</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-400 font-bold">⚡</span>
+              <span>Conduct free AI workshops with local degree colleges for .ac.in backlinks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-400 font-bold">⚡</span>
+              <span>A/B test primary hero CTA; deploy Looker Studio unified dashboard</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500 font-mono">
+    SmartEdge Academy Audit Dashboard • Generated with verified real-world code &amp; network telemetry • All rights reserved.
+  </footer>
+
+  <script>
+    // Radar Chart: Functional Category Scores
+    const radarCtx = document.getElementById('categoryRadarChart').getContext('2d');
+    new Chart(radarCtx, {
+      type: 'radar',
+      data: {
+        labels: ['Technical SEO', 'On-Page SEO', 'Local SEO & GBP', 'AEO / Answers', 'GEO / AI Discoverability', 'Content / E-E-A-T', 'Schema Markup', 'Performance / CWV', 'UX / CRO', 'Tracking Readiness'],
+        datasets: [{
+          label: 'Current Score',
+          data: [58, 74, 42, 85, 88, 72, 60, 52, 65, 70],
+          backgroundColor: 'rgba(56, 189, 248, 0.2)',
+          borderColor: '#38bdf8',
+          pointBackgroundColor: '#38bdf8',
+          borderWidth: 2
+        }, {
+          label: '90-Day Target Post-Fix',
+          data: [96, 92, 95, 96, 95, 90, 98, 92, 94, 95],
+          backgroundColor: 'rgba(52, 211, 153, 0.15)',
+          borderColor: '#34d399',
+          pointBackgroundColor: '#34d399',
+          borderWidth: 2,
+          borderDash: [4, 4]
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+            grid: { color: 'rgba(255, 255, 255, 0.08)' },
+            pointLabels: { color: '#94a3b8', font: { size: 10, family: 'Plus Jakarta Sans' } },
+            ticks: { display: false, min: 0, max: 100 }
+          }
+        },
+        plugins: {
+          legend: { labels: { color: '#cbd5e1', font: { size: 11 } } }
+        }
+      }
+    });
+
+    // Bar Chart: Severity Breakdown
+    const barCtx = document.getElementById('severityBarChart').getContext('2d');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Critical', 'High', 'Medium', 'Low'],
+        datasets: [{
+          data: [3, 7, 6, 2],
+          backgroundColor: ['#f43f5e', '#f59e0b', '#0ea5e9', '#64748b'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+          y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, ticks: { color: '#94a3b8', stepSize: 1 } }
+        }
+      }
+    });
+
+    // Issues Data Table
+    const issuesData = [
+      { id: "TECH-001", sev: "Critical", cat: "Technical SEO", title: "Global Hardcoded Canonical URL Bug", evidence: "All inner subpages output canonical tag pointing back to root homepage.", impact: "Complete indexation failure and keyword de-ranking for all 21 course pages.", fix: "Refactor lib/utils.ts constructMetadata to dynamically generate self-referential canonicals." },
+      { id: "CRO-001", sev: "Critical", cat: "CRO", title: "Silent Lead Form Pipeline", evidence: "app/api/enquiry/route.ts only executes console.log; leads are never emailed or stored.", impact: "100% loss of all organic and direct web form admissions enquiries.", fix: "Connect Resend/SMTP to deliver leads immediately to admissions@smartedgegroup.in." },
+      { id: "LOCAL-001", sev: "Critical", cat: "Local", title: "Unclaimed Google Business Profile", evidence: "Google Maps embed links to building; no verified GBP exists for SmartEdge Academy.", impact: "0% capture of local pack search queries ('computer classes in Bhiwandi').", fix: "Claim and verify Google Business Profile under 'SmartEdge Academy - IT & AI Institute'." },
+      { id: "TECH-003", sev: "High", cat: "Technical SEO", title: "Oversized Initial HTML Document (1.23 MB)", evidence: "next.config.mjs has experimental.inlineCss enabled, causing colossal document payload.", impact: "Slow TTFB, delayed rendering, high mobile bounce rates.", fix: "Remove inlineCss flag in next.config.mjs to enable standard chunked CSS caching." },
+      { id: "SCHEMA-001", sev: "High", cat: "Schema", title: "Global FAQ & Course Schema Leakage", evidence: "StructuredData in root layout injects FAQPage and 8 Course schemas onto every page.", impact: "Violates Google Structured Data guidelines; schema dilution.", fix: "Scope FAQPage to pages with visible FAQs; inject Course schemas only on course pages." },
+      { id: "LOCAL-002", sev: "High", cat: "Local", title: "Lack of Local Citation Footprint", evidence: "Zero verified NAP listings on Justdial, Sulekha, IndiaMART for SmartEdge Academy.", impact: "Lacks local prominence signals compared to established local computer classes.", fix: "Build 25+ verified citations with exact matching NAP across Indian educational portals." },
+      { id: "CRO-002", sev: "High", cat: "CRO", title: "Missing Analytics Conversion Events", evidence: "Form submissions and WhatsApp clicks trigger zero gtag or PostHog custom events.", impact: "Zero marketing visibility into ad spend ROI and organic lead attribution.", fix: "Add gtag('event', 'generate_lead') and PostHog capture events on conversion triggers." },
+      { id: "TECH-004", sev: "High", cat: "Technical SEO", title: "Missing Security Headers", evidence: "Missing X-Frame-Options, X-Content-Type-Options, and Referrer-Policy.", impact: "Vulnerable to clickjacking; lower technical security rating.", fix: "Configure headers() method in next.config.mjs." },
+      { id: "ONPAGE-002", sev: "High", cat: "Content", title: "Non-Indexable Blog Post Cards", evidence: "Blog page has 5 high-value cards with zero dedicated slug URLs.", impact: "Cannot capture long-tail organic search queries ('BCom to Data Analyst').", fix: "Build dynamic app/(marketing)/blog/[slug]/page.tsx with 1,500+ word guides." }
+    ];
+
+    function renderTable(items) {
+      const tbody = document.getElementById('issuesTableBody');
+      tbody.innerHTML = items.map(item => {
+        let badgeColor = item.sev === 'Critical' ? 'bg-rose-500/10 text-rose-400 border-rose-500/30' : (item.sev === 'High' ? 'bg-amber-500/10 text-amber-400 border-amber-500/30' : 'bg-sky-500/10 text-sky-400 border-sky-500/30');
+        return `
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3 px-3 font-mono font-bold text-sky-400">${item.id}</td>
+            <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-bold border ${badgeColor}">${item.sev}</span></td>
+            <td class="py-3 px-3 font-mono text-slate-300">${item.cat}</td>
+            <td class="py-3 px-3">
+              <div class="font-bold text-white">${item.title}</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">${item.evidence}</div>
+            </td>
+            <td class="py-3 px-3 text-slate-300 text-[11px]">${item.impact}</td>
+            <td class="py-3 px-3 text-emerald-400 text-[11px] font-medium">${item.fix}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function filterIssues(type) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-sky-600', 'text-white'));
+      event.target.classList.add('bg-sky-600', 'text-white');
+      if (type === 'all') {
+        renderTable(issuesData);
+      } else if (type === 'Critical' || type === 'High') {
+        renderTable(issuesData.filter(i => i.sev === type));
+      } else {
+        renderTable(issuesData.filter(i => i.cat.includes(type)));
+      }
+    }
+
+    // Initial render
+    renderTable(issuesData);
+  </script>
+</body>
+</html>

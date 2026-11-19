@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SmartEdge Academy Production Schema Markup Recommendations",
+  "description": "Validated, policy-compliant JSON-LD schema recommendations for SmartEdge Academy Bhiwandi. Split into global, course-specific, and page-specific implementations.",
+  "schemas": {
+    "global_local_business_and_educational_org": {
+      "target_location": "app/layout.tsx (Global Head)",
+      "notes": "Combines EducationalOrganization and LocalBusiness to anchor entity identity in Google Knowledge Graph and local search.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@type": ["EducationalOrganization", "LocalBusiness"],
+        "@id": "https://academy.smartedgegroup.in/#organization",
+        "name": "SmartEdge Academy",
+        "legalName": "SmartEdge Academy",
+        "alternateName": ["SmartEdge IT & AI Academy", "SmartEdge Group Academy"],
+        "url": "https://academy.smartedgegroup.in",
+        "logo": "https://academy.smartedgegroup.in/icon.svg",
+        "image": "https://academy.smartedgegroup.in/smartedge-admission-flex.jpg",
+        "slogan": "DON'T JUST GET A DEGREE. GET JOB-READY WITH AI.",
+        "description": "SmartEdge Academy is Bhiwandi's premier AI-powered career and job skills institute. Practical IT & AI courses in Java, Python, Data Science, Power BI, React, MERN, Cloud & DevOps, ChatGPT, Antigravity, and n8n with 100% Job Assistance.",
+        "telephone": "+91-98206-24436",
+        "email": "admissions@smartedgegroup.in",
+        "priceRange": "₹₹",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "SmartEdge Group",
+          "url": "https://smartedgegroup.in"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, Laxmi Ajit Complex, Mubeen Master Road, Near Shiv Mandir, Opp. Curewell Pharmacy, Gauripada, Samad Nagar",
+          "addressLocality": "Bhiwandi",
+          "addressRegion": "Maharashtra",
+          "postalCode": "421305",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "19.28827",
+          "longitude": "73.05389"
+        },
+        "hasMap": "https://maps.google.com/?q=Laxmi+Ajit+Complex+Mubeen+Master+Road+Gauripada+Bhiwandi+Maharashtra+421305",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00",
+            "closes": "20:00"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-98206-24436",
+            "contactType": "admissions",
+            "email": "admissions@smartedgegroup.in",
+            "areaServed": ["Bhiwandi", "Thane", "Kalyan", "Mumbai", "IN"],
+            "availableLanguage": ["English", "Hindi", "Marathi"]
+          }
+        ],
+        "sameAs": [
+          "https://academy.smartedgegroup.in",
+          "https://twitter.com/smartedgegroup",
+          "https://linkedin.com/company/smartedgegroup",
+          "https://github.com/smartedgegroup",
+          "https://wa.me/919820624436"
+        ]
+      }
+    },
+    "global_website_search": {
+      "target_location": "app/layout.tsx (Global Head)",
+      "notes": "Establishes WebSite schema linked to publisher organization.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://academy.smartedgegroup.in/#website",
+        "url": "https://academy.smartedgegroup.in",
+        "name": "SmartEdge Academy",
+        "description": "AI-Powered Career & Job Skills Academy in Bhiwandi",
+        "publisher": {
+          "@id": "https://academy.smartedgegroup.in/#organization"
+        },
+        "inLanguage": "en-IN"
+      }
+    },
+    "course_detail_template": {
+      "target_location": "app/(marketing)/courses/[slug]/page.tsx",
+      "notes": "Inject on individual course landing pages only. Enhances course rich snippet eligibility.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "@id": "https://academy.smartedgegroup.in/courses/java-developer#course",
+        "name": "Java Developer",
+        "description": "Master Core Java, OOPs, Spring Boot, Microservices, Hibernate and REST APIs with live enterprise-grade projects.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "SmartEdge Academy",
+          "sameAs": "https://academy.smartedgegroup.in"
+        },
+        "educationalCredentialAwarded": "SmartEdge Academy Certificate of Completion",
+        "timeRequired": "P4M to P6M",
+        "occupationalCredentialAwarded": "Junior Java Developer, Backend Engineer, Spring Boot Developer",
+        "coursePrerequisites": "12th Pass, BSc, BCA, BCom, Engineering or Any Graduate. No prior coding experience required.",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": ["Onsite", "Blended"],
+          "courseWorkload": "PT10H/W",
+          "location": {
+            "@type": "Place",
+            "name": "SmartEdge Academy Bhiwandi Campus",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1st Floor, Laxmi Ajit Complex, Mubeen Master Road, Near Shiv Mandir, Opp. Curewell Pharmacy, Gauripada, Samad Nagar",
+              "addressLocality": "Bhiwandi",
+              "addressRegion": "Maharashtra",
+              "postalCode": "421305",
+              "addressCountry": "IN"
+            }
+          }
+        },
+        "offers": {
+          "@type": "Offer",
+          "category": "Vocational IT Training",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-01-01",
+          "url": "https://academy.smartedgegroup.in/courses/java-developer"
+        }
+      }
+    },
+    "breadcrumb_list_template": {
+      "target_location": "app/(marketing)/courses/[slug]/page.tsx",
+      "notes": "Provides breadcrumb rich snippet in search engine results.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://academy.smartedgegroup.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "All Courses",
+            "item": "https://academy.smartedgegroup.in/courses"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Java Developer",
+            "item": "https://academy.smartedgegroup.in/courses/java-developer"
+          }
+        ]
+      }
+    },
+    "homepage_visible_faq": {
+      "target_location": "app/(marketing)/page.tsx (Rendered alongside visual Accordion FAQ)",
+      "notes": "Strictly compliant with Google guidelines: must match visible text on page.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What courses are offered at SmartEdge Academy in Bhiwandi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SmartEdge Academy offers 21+ industry-aligned courses across Software Engineering (Java, Python, MERN Stack, React, Cloud & DevOps, SQL), Data Careers (Data Science, Data Analyst, Power BI), and AI & Automation (ChatGPT for Professionals, Google Gemini, Antigravity AI, and n8n Workflow Automation)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can non-IT graduates (BCom, BSc, BA, 12th Pass) join coding courses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, absolutely! All SmartEdge Academy programs start from ground zero fundamentals and guide students through hands-on project building. Graduates from BCom, MCom, Plain BSc, Arts, or Engineering can successfully transition into high-growth software and data roles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 100% Job Assistance policy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SmartEdge Academy provides 100% Job Assistance support services including ATS-compliant resume creation, live GitHub project portfolio showcases, simulated 1-on-1 mock interviews with senior engineers, and active corporate hiring referrals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is SmartEdge Academy located in Bhiwandi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The campus is located at 1st Floor, Laxmi Ajit Complex, Mubeen Master Road, Near Shiv Mandir, Opp. Curewell Pharmacy, Gauripada, Samad Nagar, Bhiwandi, Maharashtra 421305. You can call or WhatsApp admissions at +91 98206 24436."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I book a Free Career Counselling session?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can book a free 1-on-1 career counselling session directly on our website at academy.smartedgegroup.in/career-counselling or by messaging our counsellors on WhatsApp at +91 98206 24436."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

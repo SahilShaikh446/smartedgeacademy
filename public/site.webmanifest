@@ -1,6 +1,8 @@
 {
-  "name": "Magic UI",
-  "short_name": "Magic UI",
+  "name": "SmartEdge Academy",
+  "short_name": "SmartEdge",
+  "description": "AI-Powered Career & Job Skills Academy in Bhiwandi",
+  "start_url": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +15,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#062B67",
   "background_color": "#ffffff",
   "display": "standalone"
 }

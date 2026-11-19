@@ -52,6 +52,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: `${course.title} Course in Bhiwandi | SmartEdge Academy`,
     description: `${course.shortDescription} Learn ${course.skillsCovered.slice(0, 5).join(", ")} with 100% Job Assistance at SmartEdge Academy Bhiwandi.`,
+    canonicalUrl: `/courses/${course.slug}`,
     keywords: [
       `${course.title} in Bhiwandi`,
       `${course.title} classes Bhiwandi`,
@@ -94,12 +95,43 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
     },
   }
 
+  // BreadcrumbList JSON-LD schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "All Courses",
+        item: `${siteConfig.url}/courses`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: course.title,
+        item: `${siteConfig.url}/courses/${course.slug}`,
+      },
+    ],
+  }
+
   return (
     <div className="bg-background text-foreground">
       {/* Course Schema Injection */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      {/* Breadcrumb Schema Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Breadcrumb Header */}

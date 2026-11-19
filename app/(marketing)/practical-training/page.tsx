@@ -26,6 +26,7 @@ export const metadata: Metadata = constructMetadata({
   title: "Projects & Practical Training | SmartEdge Academy Bhiwandi",
   description:
     "Don't just learn technology. Build with it. Explore SmartEdge Academy's practical project tracks in Full Stack Web Apps, BI Dashboards, AI Agents, and Workflow Automations.",
+  canonicalUrl: "/practical-training",
 })
 
 export default function PracticalTrainingPage() {

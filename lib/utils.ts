@@ -95,13 +95,19 @@ export function constructMetadata({
   title = "SmartEdge Academy | AI-Powered Career & Job Skills Academy in Bhiwandi",
   description = "DON'T JUST GET A DEGREE. GET JOB-READY WITH AI. SmartEdge Academy in Bhiwandi provides practical IT & AI courses in Java, Python, Data Science, Power BI, React, Cloud DevOps, and 100% Job Assistance.",
   image = absoluteUrl("/smartedge-admission-flex.jpg"),
+  canonicalUrl,
   ...props
 }: {
   title?: string
   description?: string
   image?: string
+  canonicalUrl?: string
   [key: string]: Metadata[keyof Metadata]
 }): Metadata {
+  const pageUrl = canonicalUrl
+    ? (canonicalUrl.startsWith("http") ? canonicalUrl : absoluteUrl(canonicalUrl))
+    : siteConfig.url
+
   return {
     title,
     description,
@@ -112,7 +118,7 @@ export function constructMetadata({
       type: "website",
       siteName: siteConfig.name,
       locale: "en_IN",
-      url: siteConfig.url,
+      url: pageUrl,
       images: [
         {
           url: image,
@@ -130,7 +136,7 @@ export function constructMetadata({
       creator: "@smartedgegroup",
     },
     alternates: {
-      canonical: siteConfig.url,
+      canonical: pageUrl,
     },
     icons: "/icon.svg",
     metadataBase: new URL(siteConfig.url),

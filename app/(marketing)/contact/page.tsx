@@ -23,6 +23,7 @@ export const metadata: Metadata = constructMetadata({
   title: "Contact & Campus Location in Bhiwandi | SmartEdge Academy",
   description:
     "Visit SmartEdge Academy at Laxmi Ajit Complex, Gauripada, Bhiwandi. Call +91 9820624436 or WhatsApp for admissions, batch schedules, fees, and campus tours.",
+  canonicalUrl: "/contact",
 })
 
 export default function ContactPage() {

@@ -28,6 +28,7 @@ export const metadata: Metadata = constructMetadata({
   title: "All IT & AI Courses in Bhiwandi | SmartEdge Academy",
   description:
     "Browse 21+ job-oriented software, data, and AI courses in Bhiwandi. Java, Python, Data Science, Data Analyst, Power BI, MERN Stack, React, Cloud & DevOps, ChatGPT, Antigravity, and n8n with 100% Job Assistance.",
+  canonicalUrl: "/courses",
   keywords: [
     ...siteConfig.keywords,
     "IT Courses in Bhiwandi",

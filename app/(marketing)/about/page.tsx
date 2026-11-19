@@ -28,6 +28,7 @@ export const metadata: Metadata = constructMetadata({
   title: "About SmartEdge Academy | AI-Powered Tech Training Institute in Bhiwandi",
   description:
     "Learn about SmartEdge Academy (SmartEdge Group), Bhiwandi's dedicated AI-powered IT skills institute helping degree holders and 12th pass students become job-ready software developers and data analysts.",
+  canonicalUrl: "/about",
 })
 
 export default function AboutPage() {
